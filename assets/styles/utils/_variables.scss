@@ -1,0 +1,33 @@
+// Breakpoints
+$breakpoints: (
+    'small': 480px,
+    'medium': 768px,
+    'large': 992px,
+    'extra-large': 1200px,
+);
+
+// Text
+$text-family-primary: 'Open Sans', sans-serif;
+
+$text-size-extra-small: 11px;
+$text-size-small: 12px;
+$text-size-regular: 14px;
+
+$text-weight-regular: 400;
+$text-weight-bold: 600;
+
+$text-line-height: 1.375em;
+
+// Title
+$title-size-regular: 20px;
+$title-size-large: 24px;
+
+// Colors
+$color-transparent: transparent;
+$color-white: #ffffff;
+$color-primary: #1c1b1a;
+$color-blue: #2985f7;
+$color-yellow: #ffc000;
+
+// Header
+$header-height: 70px;

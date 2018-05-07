@@ -1,0 +1,27 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+body {
+    background: $color-white;
+    font-family:  $text-family-primary;
+    font-size: $text-size-regular;
+    font-weight: $text-weight-regular;
+    line-height: $text-line-height;
+    color: $color-primary;
+}
+
+.container {
+    margin-right: 30px;
+    margin-left: 30px;
+
+    @include breakpoint(medium) {
+        margin-right: 60px;
+        margin-left: 60px;
+    }
+
+    @include breakpoint(extra-large) {
+        width: 1200px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}

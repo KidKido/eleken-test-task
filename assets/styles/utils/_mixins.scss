@@ -1,0 +1,13 @@
+// @mixin breakpoint
+// @param point {String}
+// @usage: @include breakpoint(small)
+@mixin breakpoint($point) {
+    @if map-has-key($breakpoints, $point) {
+        @media (min-width: #{map-get($breakpoints, $point)}) {
+            @content;
+        }
+    }
+    @else {
+        @warn 'Point `#{$point}` is not defined in the `$breakpoints` map.';
+    }
+}
