@@ -1,0 +1,48 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.footer {
+    border-top: 1px solid #{fade-out($color-primary, 0.9)};
+    border-radius: 2px;
+
+    > .container {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+
+        @include breakpoint(small) {
+            justify-content: flex-start;
+        }
+    }
+
+    &__copyright {
+        font-size: $text-size-small;
+        line-height: $footer-height;
+        color: #{fade-out($color-black, 0.3)};
+    }
+
+    &__menu {
+        display: none;
+
+        @include breakpoint(large) {
+            display: flex;
+        }
+
+        &__item {
+            margin-left: 30px;
+        }
+
+        &__link {
+            display: block;
+            font-size: $text-size-small;
+            line-height: $footer-height;
+            color: #{fade-out($color-black, 0.3)};
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
