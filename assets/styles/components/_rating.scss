@@ -1,0 +1,20 @@
+@import '../utils/variables';
+
+.rating {
+    display: flex;
+
+    &__item {
+        width: 16px;
+        height: 16px;
+        background: url(/assets/images/star.svg) no-repeat center;
+        background-size: contain;
+        color: $color-transparent;
+        margin-right: 2px;
+        opacity: 0.15;
+
+        &--active {
+            background-image: url(/assets/images/star-active.svg);
+            opacity: 1;
+        }
+    }
+}

@@ -4,7 +4,7 @@
 .home {
     &__header {
         display: flex;
-        border-bottom: 1px solid #{fade-out($color-primary, 0.9)};
+        border-bottom: 1px solid $color-border;
         justify-content: center;
         padding-top: 40px;
         padding-bottom: 10px;
@@ -16,10 +16,12 @@
 
     &__title {
         font-size: $title-size-large;
+        line-height: $line-height-regular;
     }
 
     &__filters {
         display: none;
+        align-self: flex-end;
 
         @include breakpoint(large) {
             display: flex;
@@ -27,7 +29,7 @@
     }
 
     &__filter {
-        border-left: 1px solid #{fade-out($color-primary, 0.9)};
+        border-left: 1px solid $color-border;
         padding: 6px 15px;
 
         &:first-child {
@@ -87,5 +89,156 @@
             }
         }
     }
-}
 
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    &__card {
+        border: 1px solid $color-border;
+        border-radius: 2px;
+        flex: 0 0 282px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        overflow: hidden;
+
+        &__header {
+            margin: 30px;
+            padding: 4px 0 4px 75px;
+            position: relative;
+        }
+
+        &__image {
+            width: 55px;
+            height: 55px;
+            background: no-repeat center;
+            background-size: cover;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &__title {
+            font-size: $title-size-regular;
+            line-height: $line-height-initial;
+            margin-bottom: 10px;
+        }
+
+        &__list {
+            margin-right: 30px;
+            margin-left: 30px;
+        }
+
+        &__row {
+            display: flex;
+            line-height: 20px;
+            border-top: 1px solid fade-out($color-primary, 0.95);
+            padding-top: 10px;
+            padding-bottom: 10px;
+            justify-content: space-between;
+
+            &:first-child {
+                border-top: none;
+                padding-top: 0;
+            }
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+
+        &__label {
+            display: flex;
+            color: fade-out($color-primary, 0.5);
+            align-items: center;
+        }
+
+        &__value {
+            display: flex;
+            color: fade-out($color-primary, 0.1);
+            align-items: center;
+        }
+
+        &__info {
+            width: 14px;
+            height: 14px;
+            background: $color-light-blue;
+            font-size: 11px;
+            font-weight: $text-weight-bold;
+            line-height: 14px;
+            text-align: center;
+            color: $color-blue;
+            border-radius: 50%;
+        }
+
+        &__info + &__text,
+        &__text + &__info {
+            margin-left: 5px;
+        }
+
+        &__medal {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            margin-right: 5px;
+
+            &--bronze {
+                background-color: $color-bronze;
+            }
+
+            &--silver {
+                background-color: $color-silver;
+            }
+
+            &--gold {
+                background-color: $color-gold;
+            }
+
+            &--platinum {
+                background-color: $color-platinum;
+            }
+        }
+
+        &__price {
+            font-size: $text-size-small * 3;
+            font-weight: $text-weight-light;
+            line-height: $line-height-regular;
+            letter-spacing: 0.02em;
+            text-align: center;
+            margin: 30px 30px 24px 30px;
+
+            &-label {
+                font-size: $title-size-regular;
+                font-weight: $text-weight-regular;
+            }
+        }
+
+        &__footer {
+            display: flex;
+            margin: 0 -1px -1px -1px;
+        }
+
+        &__button {
+            width: 50%;
+            height: 40px;
+            font-size: $text-size-small;
+            border-radius: 0;
+
+            &.button--default {
+                border-right: none;
+                border-bottom: none;
+                border-left: none;
+            }
+
+            &.button--primary {
+                margin-right: -1px;
+                margin-bottom: -1px;
+            }
+        }
+    }
+}

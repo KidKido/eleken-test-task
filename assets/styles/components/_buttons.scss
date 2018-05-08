@@ -1,0 +1,23 @@
+@import '../utils/variables';
+
+.button {
+    display: inline-block;
+    height: 30px;
+    font-size: $text-size-extra-small;
+    font-weight: $text-weight-bold;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    border-radius: 4px;
+    padding-right: 26px;
+    padding-left: 26px;
+
+    &--default {
+        color: $color-blue;
+        border: 1px solid $color-border;
+    }
+
+    &--primary {
+        background-color: $color-blue;
+        color: $color-white;
+    }
+}

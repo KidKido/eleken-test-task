@@ -2,7 +2,7 @@
 @import '../utils/mixins';
 
 .header {
-    box-shadow: 0 1px 4px #{fade-out($color-primary, 0.93)};
+    box-shadow: 0 1px 4px fade-out($color-primary, 0.93);
 
     > .container {
         display: flex;
@@ -16,7 +16,7 @@
         -webkit-background-clip: text;
         font-family: 'Montserrat', sans-serif;
         font-size: 18px;
-        letter-spacing: 1.8px;
+        letter-spacing: 0.1em;
         line-height: $header-height;
         text-transform: uppercase;
         color: transparent;
@@ -41,7 +41,7 @@
             display: block;
             height: $header-height;
             line-height: $header-height;
-            color: #{fade-out($color-primary, 0.5)};
+            color: fade-out($color-primary, 0.5);
             border-bottom: 3px solid $color-transparent;
             padding-right: 10px;
             padding-left: 10px;
