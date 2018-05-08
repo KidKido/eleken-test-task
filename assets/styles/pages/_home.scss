@@ -1,0 +1,91 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.home {
+    &__header {
+        display: flex;
+        border-bottom: 1px solid #{fade-out($color-primary, 0.9)};
+        justify-content: center;
+        padding-top: 40px;
+        padding-bottom: 10px;
+
+        @include breakpoint(medium) {
+            justify-content: space-between;
+        }
+    }
+
+    &__title {
+        font-size: $title-size-large;
+    }
+
+    &__filters {
+        display: none;
+
+        @include breakpoint(large) {
+            display: flex;
+        }
+    }
+
+    &__filter {
+        border-left: 1px solid #{fade-out($color-primary, 0.9)};
+        padding: 6px 15px;
+
+        &:first-child {
+            border-left: none;
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
+
+        &__button {
+            display: block;
+            width: 18px;
+            height: 18px;
+            position: relative;
+            opacity: 0.4;
+
+            &--active {
+                opacity: 1;
+            }
+        }
+
+        &__line {
+            display: block;
+            height: 2px;
+            background-color: $color-primary;
+            border-radius: 1px;
+            margin-bottom: 3px;
+        }
+
+        &__box {
+            display: block;
+            width: 8px;
+            height: 8px;
+            border: 2px solid $color-primary;
+            border-radius: 1px;
+            position: absolute;
+
+            &--top-left {
+                top: 0;
+                left: 0;
+            }
+
+            &--top-right {
+                top: 0;
+                right: 0;
+            }
+
+            &--bottom-left {
+                bottom: 0;
+                left: 0;
+            }
+
+            &--bottom-right {
+                right: 0;
+                bottom: 0;
+            }
+        }
+    }
+}
+
