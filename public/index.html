@@ -53,7 +53,7 @@
 
             <ul class="home__filters">
                 <li class="home__filter">
-                    <button class="home__filter__button home__filter__button--active">
+                    <button class="home__filter__button home__filter__button--active" data-view="table">
                         <span class="home__filter__line"></span>
                         <span class="home__filter__line"></span>
                         <span class="home__filter__line"></span>
@@ -61,7 +61,7 @@
                     </button>
                 </li>
                 <li class="home__filter">
-                    <button class="home__filter__button">
+                    <button class="home__filter__button" data-view="cards">
                         <span class="home__filter__box home__filter__box--top-left"></span>
                         <span class="home__filter__box home__filter__box--top-right"></span>
                         <span class="home__filter__box home__filter__box--bottom-left"></span>
@@ -72,572 +72,528 @@
 
         </div>
 
-        <ul class="home__cards">
+        <ul class="home__cards" data-view="table">
+
+            <li class="home__card home__card--header">
+                <div class="home__card__block home__card__heading home__card__heading--company">Company</div>
+                <div class="home__card__block home__card__heading home__card__heading--covering">Covering</div>
+                <div class="home__card__block home__card__heading home__card__heading--type">Type</div>
+                <div class="home__card__block home__card__heading home__card__heading--metal">Metal level</div>
+                <div class="home__card__block home__card__heading home__card__heading--drugs">Drugs</div>
+                <div class="home__card__block home__card__heading home__card__heading--visits">Primary care visits</div>
+                <div class="home__card__block home__card__heading home__card__heading--deductible">Yearly deductible</div>
+                <div class="home__card__block home__card__heading home__card__heading--price">Price</div>
+                <div class="home__card__block home__card__heading home__card__heading--buttons">&nbsp;</div>
+            </li>
 
             <!-- Start Insurcom -->
             <li class="home__card">
-                <div class="home__card__block">
-
-                    <div class="home__card__header">
-                        <div class="home__card__image"
-                             style="background-image: url(/assets/images/insurcom.jpg);"></div>
-                        <h3 class="home__card__title">Insurcom</h3>
-                        <ul class="rating home__card__rating">
-                            <li class="rating__item rating__item--active">Awful</li>
-                            <li class="rating__item rating__item--active">Bad</li>
-                            <li class="rating__item rating__item--active">Not bad</li>
-                            <li class="rating__item rating__item--active">Good</li>
-                            <li class="rating__item rating__item--active">Excellent</li>
-                        </ul>
-                    </div>
-
-                    <ul class="home__card__list">
-                        <li class="home__card__row">
-                            <div class="home__card__label">Covering:</div>
-                            <div class="home__card__value">Health</div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">Type:</div>
-                            <div class="home__card__value">
-                                <span class="home__card__text">PPO</span>
-                                <span class="home__card__info">?</span>
-                            </div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">Metal level:</div>
-                            <div class="home__card__value">
-                                <span class="home__card__medal home__card__medal--platinum"></span>
-                                <span class="home__card__text">Platinum</span>
-                                <span class="home__card__info">?</span>
-                            </div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">
-                                <span class="home__card__info">?</span>
-                                <span class="home__card__text">Drugs:</span>
-                            </div>
-                            <div class="home__card__value">$15</div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">
-                                <span class="home__card__info">?</span>
-                                <span class="home__card__text">Primary Care Visits:</span>
-                            </div>
-                            <div class="home__card__value">$75</div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">
-                                <span class="home__card__info">?</span>
-                                <span class="home__card__text">Yearly Deductible:</span>
-                            </div>
-                            <div class="home__card__value">$6000</div>
-                        </li>
+                <div class="home__card__block home__card__header">
+                    <div class="home__card__image"
+                         style="background-image: url(/assets/images/logos/insurcom.jpg);"></div>
+                    <h3 class="home__card__title">Insurcom</h3>
+                    <ul class="rating home__card__rating">
+                        <li class="rating__item rating__item--active">Awful</li>
+                        <li class="rating__item rating__item--active">Bad</li>
+                        <li class="rating__item rating__item--active">Not bad</li>
+                        <li class="rating__item rating__item--active">Good</li>
+                        <li class="rating__item rating__item--active">Excellent</li>
                     </ul>
-
-                    <div class="home__card__price">$356/<span class="home__card__price-label">mon</span></div>
-
-                    <div class="home__card__footer">
-                        <button class="button button--default home__card__button">Overview</button>
-                        <button class="button button--primary home__card__button">Buy</button>
+                </div>
+                <div class="home__card__block home__card__info home__card__info--first">
+                    <div class="home__card__label">Covering:</div>
+                    <div class="home__card__value">Health</div>
+                </div>
+                <div class="home__card__block home__card__info">
+                    <div class="home__card__label">Type:</div>
+                    <div class="home__card__value">
+                        <span class="home__card__text">PPO</span>
+                        <span class="home__card__help">?</span>
                     </div>
-
+                </div>
+                <div class="home__card__block home__card__info">
+                    <div class="home__card__label">Metal level:</div>
+                    <div class="home__card__value">
+                        <span class="home__card__medal home__card__medal--platinum"></span>
+                        <span class="home__card__text">Platinum</span>
+                        <span class="home__card__help">?</span>
+                    </div>
+                </div>
+                <div class="home__card__block home__card__info">
+                    <div class="home__card__label">
+                        <span class="home__card__help">?</span>
+                        <span class="home__card__text">Drugs:</span>
+                    </div>
+                    <div class="home__card__value">$15</div>
+                </div>
+                <div class="home__card__block home__card__info">
+                    <div class="home__card__label">
+                        <span class="home__card__help">?</span>
+                        <span class="home__card__text">Primary Care Visits:</span>
+                    </div>
+                    <div class="home__card__value">$75</div>
+                </div>
+                <div class="home__card__block home__card__info home__card__info--last">
+                    <div class="home__card__label">
+                        <span class="home__card__help">?</span>
+                        <span class="home__card__text">Yearly Deductible:</span>
+                    </div>
+                    <div class="home__card__value">$6000</div>
+                </div>
+                <div class="home__card__block home__card__price">
+                    <span class="home__card__price-amount">$356/</span><span class="home__card__price-label">mon</span>
+                </div>
+                <div class="home__card__block home__card__footer">
+                    <button class="button button--default home__card__button">Overview</button>
+                    <button class="button button--primary home__card__button">Buy</button>
                 </div>
             </li>
             <!-- End Insurcom -->
 
             <!-- Start Health Ins -->
             <li class="home__card">
-                <div class="home__card__block">
-
-                    <div class="home__card__header">
-                        <div class="home__card__image"
-                             style="background-image: url(/assets/images/health-ins.png);"></div>
-                        <h3 class="home__card__title">Health Ins</h3>
-                        <ul class="rating home__card__rating">
-                            <li class="rating__item rating__item--active">Awful</li>
-                            <li class="rating__item rating__item--active">Bad</li>
-                            <li class="rating__item rating__item--active">Not bad</li>
-                            <li class="rating__item">Good</li>
-                            <li class="rating__item">Excellent</li>
-                        </ul>
-                    </div>
-
-                    <ul class="home__card__list">
-                        <li class="home__card__row">
-                            <div class="home__card__label">Covering:</div>
-                            <div class="home__card__value">All-in-one</div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">Type:</div>
-                            <div class="home__card__value">
-                                <span class="home__card__text">HMO</span>
-                                <span class="home__card__info">?</span>
-                            </div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">Metal level:</div>
-                            <div class="home__card__value">
-                                <span class="home__card__medal home__card__medal--silver"></span>
-                                <span class="home__card__text">Silver</span>
-                                <span class="home__card__info">?</span>
-                            </div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">
-                                <span class="home__card__info">?</span>
-                                <span class="home__card__text">Drugs:</span>
-                            </div>
-                            <div class="home__card__value">$15</div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">
-                                <span class="home__card__info">?</span>
-                                <span class="home__card__text">Primary Care Visits:</span>
-                            </div>
-                            <div class="home__card__value">$75</div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">
-                                <span class="home__card__info">?</span>
-                                <span class="home__card__text">Yearly Deductible:</span>
-                            </div>
-                            <div class="home__card__value">$6000</div>
-                        </li>
+                <div class="home__card__block home__card__header">
+                    <div class="home__card__image"
+                         style="background-image: url(/assets/images/logos/health-ins.png);"></div>
+                    <h3 class="home__card__title">Health Ins</h3>
+                    <ul class="rating home__card__rating">
+                        <li class="rating__item rating__item--active">Awful</li>
+                        <li class="rating__item rating__item--active">Bad</li>
+                        <li class="rating__item rating__item--active">Not bad</li>
+                        <li class="rating__item">Good</li>
+                        <li class="rating__item">Excellent</li>
                     </ul>
-
-                    <div class="home__card__price">$611/<span class="home__card__price-label">mon</span></div>
-
-                    <div class="home__card__footer">
-                        <button class="button button--default home__card__button">Overview</button>
-                        <button class="button button--primary home__card__button">Buy</button>
+                </div>
+                <div class="home__card__block home__card__info home__card__info--first">
+                    <div class="home__card__label">Covering:</div>
+                    <div class="home__card__value">All-in-One</div>
+                </div>
+                <div class="home__card__block home__card__info">
+                    <div class="home__card__label">Type:</div>
+                    <div class="home__card__value">
+                        <span class="home__card__text">HMO</span>
+                        <span class="home__card__help">?</span>
                     </div>
-
+                </div>
+                <div class="home__card__block home__card__info">
+                    <div class="home__card__label">Metal level:</div>
+                    <div class="home__card__value">
+                        <span class="home__card__medal home__card__medal--silver"></span>
+                        <span class="home__card__text">Silver</span>
+                        <span class="home__card__help">?</span>
+                    </div>
+                </div>
+                <div class="home__card__block home__card__info">
+                    <div class="home__card__label">
+                        <span class="home__card__help">?</span>
+                        <span class="home__card__text">Drugs:</span>
+                    </div>
+                    <div class="home__card__value">$15</div>
+                </div>
+                <div class="home__card__block home__card__info">
+                    <div class="home__card__label">
+                        <span class="home__card__help">?</span>
+                        <span class="home__card__text">Primary Care Visits:</span>
+                    </div>
+                    <div class="home__card__value">$75</div>
+                </div>
+                <div class="home__card__block home__card__info home__card__info--last">
+                    <div class="home__card__label">
+                        <span class="home__card__help">?</span>
+                        <span class="home__card__text">Yearly Deductible:</span>
+                    </div>
+                    <div class="home__card__value">$6000</div>
+                </div>
+                <div class="home__card__block home__card__price">
+                    <span class="home__card__price-amount">$611/</span><span class="home__card__price-label">mon</span>
+                </div>
+                <div class="home__card__block home__card__footer">
+                    <button class="button button--default home__card__button">Overview</button>
+                    <button class="button button--primary home__card__button">Buy</button>
                 </div>
             </li>
             <!-- End Health Ins -->
 
             <!-- Start Dentalife -->
             <li class="home__card">
-                <div class="home__card__block">
-
-                    <div class="home__card__header">
-                        <div class="home__card__image"
-                             style="background-image: url(/assets/images/dentalife.jpg);"></div>
-                        <h3 class="home__card__title">Dentalife</h3>
-                        <ul class="rating home__card__rating">
-                            <li class="rating__item rating__item--active">Awful</li>
-                            <li class="rating__item rating__item--active">Bad</li>
-                            <li class="rating__item rating__item--active">Not bad</li>
-                            <li class="rating__item rating__item--active">Good</li>
-                            <li class="rating__item rating__item--active">Excellent</li>
-                        </ul>
-                    </div>
-
-                    <ul class="home__card__list">
-                        <li class="home__card__row">
-                            <div class="home__card__label">Covering:</div>
-                            <div class="home__card__value">Dental</div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">Type:</div>
-                            <div class="home__card__value">
-                                <span class="home__card__text">EPO</span>
-                                <span class="home__card__info">?</span>
-                            </div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">Metal level:</div>
-                            <div class="home__card__value">
-                                <span class="home__card__medal home__card__medal--gold"></span>
-                                <span class="home__card__text">Gold</span>
-                                <span class="home__card__info">?</span>
-                            </div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">
-                                <span class="home__card__info">?</span>
-                                <span class="home__card__text">Drugs:</span>
-                            </div>
-                            <div class="home__card__value">$15</div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">
-                                <span class="home__card__info">?</span>
-                                <span class="home__card__text">Primary Care Visits:</span>
-                            </div>
-                            <div class="home__card__value">$75</div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">
-                                <span class="home__card__info">?</span>
-                                <span class="home__card__text">Yearly Deductible:</span>
-                            </div>
-                            <div class="home__card__value">$6000</div>
-                        </li>
+                <div class="home__card__block home__card__header">
+                    <div class="home__card__image"
+                         style="background-image: url(/assets/images/logos/dentalife.jpg);"></div>
+                    <h3 class="home__card__title">Dentalife</h3>
+                    <ul class="rating home__card__rating">
+                        <li class="rating__item rating__item--active">Awful</li>
+                        <li class="rating__item rating__item--active">Bad</li>
+                        <li class="rating__item rating__item--active">Not bad</li>
+                        <li class="rating__item rating__item--active">Good</li>
+                        <li class="rating__item">Excellent</li>
                     </ul>
-
-                    <div class="home__card__price">$283/<span class="home__card__price-label">mon</span></div>
-
-                    <div class="home__card__footer">
-                        <button class="button button--default home__card__button">Overview</button>
-                        <button class="button button--primary home__card__button">Buy</button>
+                </div>
+                <div class="home__card__block home__card__info home__card__info--first">
+                    <div class="home__card__label">Covering:</div>
+                    <div class="home__card__value">Dental</div>
+                </div>
+                <div class="home__card__block home__card__info">
+                    <div class="home__card__label">Type:</div>
+                    <div class="home__card__value">
+                        <span class="home__card__text">EPO</span>
+                        <span class="home__card__help">?</span>
                     </div>
-
+                </div>
+                <div class="home__card__block home__card__info">
+                    <div class="home__card__label">Metal level:</div>
+                    <div class="home__card__value">
+                        <span class="home__card__medal home__card__medal--gold"></span>
+                        <span class="home__card__text">Gold</span>
+                        <span class="home__card__help">?</span>
+                    </div>
+                </div>
+                <div class="home__card__block home__card__info">
+                    <div class="home__card__label">
+                        <span class="home__card__help">?</span>
+                        <span class="home__card__text">Drugs:</span>
+                    </div>
+                    <div class="home__card__value">$15</div>
+                </div>
+                <div class="home__card__block home__card__info">
+                    <div class="home__card__label">
+                        <span class="home__card__help">?</span>
+                        <span class="home__card__text">Primary Care Visits:</span>
+                    </div>
+                    <div class="home__card__value">$75</div>
+                </div>
+                <div class="home__card__block home__card__info home__card__info--last">
+                    <div class="home__card__label">
+                        <span class="home__card__help">?</span>
+                        <span class="home__card__text">Yearly Deductible:</span>
+                    </div>
+                    <div class="home__card__value">$6000</div>
+                </div>
+                <div class="home__card__block home__card__price">
+                    <span class="home__card__price-amount">$283/</span><span class="home__card__price-label">mon</span>
+                </div>
+                <div class="home__card__block home__card__footer">
+                    <button class="button button--default home__card__button">Overview</button>
+                    <button class="button button--primary home__card__button">Buy</button>
                 </div>
             </li>
             <!-- End Dentalife -->
 
             <!-- Start Insurcom -->
             <li class="home__card">
-                <div class="home__card__block">
-
-                    <div class="home__card__header">
-                        <div class="home__card__image"
-                             style="background-image: url(/assets/images/insurcom.jpg);"></div>
-                        <h3 class="home__card__title">Insurcom</h3>
-                        <ul class="rating home__card__rating">
-                            <li class="rating__item rating__item--active">Awful</li>
-                            <li class="rating__item rating__item--active">Bad</li>
-                            <li class="rating__item rating__item--active">Not bad</li>
-                            <li class="rating__item rating__item--active">Good</li>
-                            <li class="rating__item rating__item--active">Excellent</li>
-                        </ul>
-                    </div>
-
-                    <ul class="home__card__list">
-                        <li class="home__card__row">
-                            <div class="home__card__label">Covering:</div>
-                            <div class="home__card__value">Vision</div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">Type:</div>
-                            <div class="home__card__value">
-                                <span class="home__card__text">POS</span>
-                                <span class="home__card__info">?</span>
-                            </div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">Metal level:</div>
-                            <div class="home__card__value">
-                                <span class="home__card__medal home__card__medal--bronze"></span>
-                                <span class="home__card__text">Bronze</span>
-                                <span class="home__card__info">?</span>
-                            </div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">
-                                <span class="home__card__info">?</span>
-                                <span class="home__card__text">Drugs:</span>
-                            </div>
-                            <div class="home__card__value">$15</div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">
-                                <span class="home__card__info">?</span>
-                                <span class="home__card__text">Primary Care Visits:</span>
-                            </div>
-                            <div class="home__card__value">$75</div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">
-                                <span class="home__card__info">?</span>
-                                <span class="home__card__text">Yearly Deductible:</span>
-                            </div>
-                            <div class="home__card__value">$6000</div>
-                        </li>
+                <div class="home__card__block home__card__header">
+                    <div class="home__card__image"
+                         style="background-image: url(/assets/images/logos/insurcom.jpg);"></div>
+                    <h3 class="home__card__title">Insurcom</h3>
+                    <ul class="rating home__card__rating">
+                        <li class="rating__item rating__item--active">Awful</li>
+                        <li class="rating__item rating__item--active">Bad</li>
+                        <li class="rating__item rating__item--active">Not bad</li>
+                        <li class="rating__item rating__item--active">Good</li>
+                        <li class="rating__item rating__item--active">Excellent</li>
                     </ul>
-
-                    <div class="home__card__price">$214/<span class="home__card__price-label">mon</span></div>
-
-                    <div class="home__card__footer">
-                        <button class="button button--default home__card__button">Overview</button>
-                        <button class="button button--primary home__card__button">Buy</button>
+                </div>
+                <div class="home__card__block home__card__info home__card__info--first">
+                    <div class="home__card__label">Covering:</div>
+                    <div class="home__card__value">Vision</div>
+                </div>
+                <div class="home__card__block home__card__info">
+                    <div class="home__card__label">Type:</div>
+                    <div class="home__card__value">
+                        <span class="home__card__text">POS</span>
+                        <span class="home__card__help">?</span>
                     </div>
-
+                </div>
+                <div class="home__card__block home__card__info">
+                    <div class="home__card__label">Metal level:</div>
+                    <div class="home__card__value">
+                        <span class="home__card__medal home__card__medal--bronze"></span>
+                        <span class="home__card__text">Bronze</span>
+                        <span class="home__card__help">?</span>
+                    </div>
+                </div>
+                <div class="home__card__block home__card__info">
+                    <div class="home__card__label">
+                        <span class="home__card__help">?</span>
+                        <span class="home__card__text">Drugs:</span>
+                    </div>
+                    <div class="home__card__value">$15</div>
+                </div>
+                <div class="home__card__block home__card__info">
+                    <div class="home__card__label">
+                        <span class="home__card__help">?</span>
+                        <span class="home__card__text">Primary Care Visits:</span>
+                    </div>
+                    <div class="home__card__value">$75</div>
+                </div>
+                <div class="home__card__block home__card__info home__card__info--last">
+                    <div class="home__card__label">
+                        <span class="home__card__help">?</span>
+                        <span class="home__card__text">Yearly Deductible:</span>
+                    </div>
+                    <div class="home__card__value">$6000</div>
+                </div>
+                <div class="home__card__block home__card__price">
+                    <span class="home__card__price-amount">$214/</span><span class="home__card__price-label">mon</span>
+                </div>
+                <div class="home__card__block home__card__footer">
+                    <button class="button button--default home__card__button">Overview</button>
+                    <button class="button button--primary home__card__button">Buy</button>
                 </div>
             </li>
             <!-- End Insurcom -->
 
             <!-- Start Insurcom -->
             <li class="home__card">
-                <div class="home__card__block">
-
-                    <div class="home__card__header">
-                        <div class="home__card__image"
-                             style="background-image: url(/assets/images/insurcom.jpg);"></div>
-                        <h3 class="home__card__title">Insurcom</h3>
-                        <ul class="rating home__card__rating">
-                            <li class="rating__item rating__item--active">Awful</li>
-                            <li class="rating__item rating__item--active">Bad</li>
-                            <li class="rating__item rating__item--active">Not bad</li>
-                            <li class="rating__item rating__item--active">Good</li>
-                            <li class="rating__item rating__item--active">Excellent</li>
-                        </ul>
-                    </div>
-
-                    <ul class="home__card__list">
-                        <li class="home__card__row">
-                            <div class="home__card__label">Covering:</div>
-                            <div class="home__card__value">Health</div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">Type:</div>
-                            <div class="home__card__value">
-                                <span class="home__card__text">PPO</span>
-                                <span class="home__card__info">?</span>
-                            </div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">Metal level:</div>
-                            <div class="home__card__value">
-                                <span class="home__card__medal home__card__medal--platinum"></span>
-                                <span class="home__card__text">Platinum</span>
-                                <span class="home__card__info">?</span>
-                            </div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">
-                                <span class="home__card__info">?</span>
-                                <span class="home__card__text">Drugs:</span>
-                            </div>
-                            <div class="home__card__value">$15</div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">
-                                <span class="home__card__info">?</span>
-                                <span class="home__card__text">Primary Care Visits:</span>
-                            </div>
-                            <div class="home__card__value">$75</div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">
-                                <span class="home__card__info">?</span>
-                                <span class="home__card__text">Yearly Deductible:</span>
-                            </div>
-                            <div class="home__card__value">$6000</div>
-                        </li>
+                <div class="home__card__block home__card__header">
+                    <div class="home__card__image"
+                         style="background-image: url(/assets/images/logos/insurcom.jpg);"></div>
+                    <h3 class="home__card__title">Insurcom</h3>
+                    <ul class="rating home__card__rating">
+                        <li class="rating__item rating__item--active">Awful</li>
+                        <li class="rating__item rating__item--active">Bad</li>
+                        <li class="rating__item rating__item--active">Not bad</li>
+                        <li class="rating__item rating__item--active">Good</li>
+                        <li class="rating__item rating__item--active">Excellent</li>
                     </ul>
-
-                    <div class="home__card__price">$356/<span class="home__card__price-label">mon</span></div>
-
-                    <div class="home__card__footer">
-                        <button class="button button--default home__card__button">Overview</button>
-                        <button class="button button--primary home__card__button">Buy</button>
+                </div>
+                <div class="home__card__block home__card__info home__card__info--first">
+                    <div class="home__card__label">Covering:</div>
+                    <div class="home__card__value">Health</div>
+                </div>
+                <div class="home__card__block home__card__info">
+                    <div class="home__card__label">Type:</div>
+                    <div class="home__card__value">
+                        <span class="home__card__text">PPO</span>
+                        <span class="home__card__help">?</span>
                     </div>
-
+                </div>
+                <div class="home__card__block home__card__info">
+                    <div class="home__card__label">Metal level:</div>
+                    <div class="home__card__value">
+                        <span class="home__card__medal home__card__medal--platinum"></span>
+                        <span class="home__card__text">Platinum</span>
+                        <span class="home__card__help">?</span>
+                    </div>
+                </div>
+                <div class="home__card__block home__card__info">
+                    <div class="home__card__label">
+                        <span class="home__card__help">?</span>
+                        <span class="home__card__text">Drugs:</span>
+                    </div>
+                    <div class="home__card__value">$15</div>
+                </div>
+                <div class="home__card__block home__card__info">
+                    <div class="home__card__label">
+                        <span class="home__card__help">?</span>
+                        <span class="home__card__text">Primary Care Visits:</span>
+                    </div>
+                    <div class="home__card__value">$75</div>
+                </div>
+                <div class="home__card__block home__card__info home__card__info--last">
+                    <div class="home__card__label">
+                        <span class="home__card__help">?</span>
+                        <span class="home__card__text">Yearly Deductible:</span>
+                    </div>
+                    <div class="home__card__value">$6000</div>
+                </div>
+                <div class="home__card__block home__card__price">
+                    <span class="home__card__price-amount">$356/</span><span class="home__card__price-label">mon</span>
+                </div>
+                <div class="home__card__block home__card__footer">
+                    <button class="button button--default home__card__button">Overview</button>
+                    <button class="button button--primary home__card__button">Buy</button>
                 </div>
             </li>
             <!-- End Insurcom -->
 
             <!-- Start Health Ins -->
             <li class="home__card">
-                <div class="home__card__block">
-
-                    <div class="home__card__header">
-                        <div class="home__card__image"
-                             style="background-image: url(/assets/images/health-ins.png);"></div>
-                        <h3 class="home__card__title">Health Ins</h3>
-                        <ul class="rating home__card__rating">
-                            <li class="rating__item rating__item--active">Awful</li>
-                            <li class="rating__item rating__item--active">Bad</li>
-                            <li class="rating__item rating__item--active">Not bad</li>
-                            <li class="rating__item">Good</li>
-                            <li class="rating__item">Excellent</li>
-                        </ul>
-                    </div>
-
-                    <ul class="home__card__list">
-                        <li class="home__card__row">
-                            <div class="home__card__label">Covering:</div>
-                            <div class="home__card__value">All-in-one</div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">Type:</div>
-                            <div class="home__card__value">
-                                <span class="home__card__text">HMO</span>
-                                <span class="home__card__info">?</span>
-                            </div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">Metal level:</div>
-                            <div class="home__card__value">
-                                <span class="home__card__medal home__card__medal--silver"></span>
-                                <span class="home__card__text">Silver</span>
-                                <span class="home__card__info">?</span>
-                            </div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">
-                                <span class="home__card__info">?</span>
-                                <span class="home__card__text">Drugs:</span>
-                            </div>
-                            <div class="home__card__value">$15</div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">
-                                <span class="home__card__info">?</span>
-                                <span class="home__card__text">Primary Care Visits:</span>
-                            </div>
-                            <div class="home__card__value">$75</div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">
-                                <span class="home__card__info">?</span>
-                                <span class="home__card__text">Yearly Deductible:</span>
-                            </div>
-                            <div class="home__card__value">$6000</div>
-                        </li>
+                <div class="home__card__block home__card__header">
+                    <div class="home__card__image"
+                         style="background-image: url(/assets/images/logos/health-ins.png);"></div>
+                    <h3 class="home__card__title">Health Ins</h3>
+                    <ul class="rating home__card__rating">
+                        <li class="rating__item rating__item--active">Awful</li>
+                        <li class="rating__item rating__item--active">Bad</li>
+                        <li class="rating__item rating__item--active">Not bad</li>
+                        <li class="rating__item">Good</li>
+                        <li class="rating__item">Excellent</li>
                     </ul>
-
-                    <div class="home__card__price">$611/<span class="home__card__price-label">mon</span></div>
-
-                    <div class="home__card__footer">
-                        <button class="button button--default home__card__button">Overview</button>
-                        <button class="button button--primary home__card__button">Buy</button>
+                </div>
+                <div class="home__card__block home__card__info home__card__info--first">
+                    <div class="home__card__label">Covering:</div>
+                    <div class="home__card__value">All-in-One</div>
+                </div>
+                <div class="home__card__block home__card__info">
+                    <div class="home__card__label">Type:</div>
+                    <div class="home__card__value">
+                        <span class="home__card__text">HMO</span>
+                        <span class="home__card__help">?</span>
                     </div>
-
+                </div>
+                <div class="home__card__block home__card__info">
+                    <div class="home__card__label">Metal level:</div>
+                    <div class="home__card__value">
+                        <span class="home__card__medal home__card__medal--silver"></span>
+                        <span class="home__card__text">Silver</span>
+                        <span class="home__card__help">?</span>
+                    </div>
+                </div>
+                <div class="home__card__block home__card__info">
+                    <div class="home__card__label">
+                        <span class="home__card__help">?</span>
+                        <span class="home__card__text">Drugs:</span>
+                    </div>
+                    <div class="home__card__value">$15</div>
+                </div>
+                <div class="home__card__block home__card__info">
+                    <div class="home__card__label">
+                        <span class="home__card__help">?</span>
+                        <span class="home__card__text">Primary Care Visits:</span>
+                    </div>
+                    <div class="home__card__value">$75</div>
+                </div>
+                <div class="home__card__block home__card__info home__card__info--last">
+                    <div class="home__card__label">
+                        <span class="home__card__help">?</span>
+                        <span class="home__card__text">Yearly Deductible:</span>
+                    </div>
+                    <div class="home__card__value">$6000</div>
+                </div>
+                <div class="home__card__block home__card__price">
+                    <span class="home__card__price-amount">$611/</span><span class="home__card__price-label">mon</span>
+                </div>
+                <div class="home__card__block home__card__footer">
+                    <button class="button button--default home__card__button">Overview</button>
+                    <button class="button button--primary home__card__button">Buy</button>
                 </div>
             </li>
             <!-- End Health Ins -->
 
             <!-- Start Dentalife -->
             <li class="home__card">
-                <div class="home__card__block">
-
-                    <div class="home__card__header">
-                        <div class="home__card__image"
-                             style="background-image: url(/assets/images/dentalife.jpg);"></div>
-                        <h3 class="home__card__title">Dentalife</h3>
-                        <ul class="rating home__card__rating">
-                            <li class="rating__item rating__item--active">Awful</li>
-                            <li class="rating__item rating__item--active">Bad</li>
-                            <li class="rating__item rating__item--active">Not bad</li>
-                            <li class="rating__item rating__item--active">Good</li>
-                            <li class="rating__item rating__item--active">Excellent</li>
-                        </ul>
-                    </div>
-
-                    <ul class="home__card__list">
-                        <li class="home__card__row">
-                            <div class="home__card__label">Covering:</div>
-                            <div class="home__card__value">Dental</div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">Type:</div>
-                            <div class="home__card__value">
-                                <span class="home__card__text">EPO</span>
-                                <span class="home__card__info">?</span>
-                            </div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">Metal level:</div>
-                            <div class="home__card__value">
-                                <span class="home__card__medal home__card__medal--gold"></span>
-                                <span class="home__card__text">Gold</span>
-                                <span class="home__card__info">?</span>
-                            </div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">
-                                <span class="home__card__info">?</span>
-                                <span class="home__card__text">Drugs:</span>
-                            </div>
-                            <div class="home__card__value">$15</div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">
-                                <span class="home__card__info">?</span>
-                                <span class="home__card__text">Primary Care Visits:</span>
-                            </div>
-                            <div class="home__card__value">$75</div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">
-                                <span class="home__card__info">?</span>
-                                <span class="home__card__text">Yearly Deductible:</span>
-                            </div>
-                            <div class="home__card__value">$6000</div>
-                        </li>
+                <div class="home__card__block home__card__header">
+                    <div class="home__card__image"
+                         style="background-image: url(/assets/images/logos/dentalife.jpg);"></div>
+                    <h3 class="home__card__title">Dentalife</h3>
+                    <ul class="rating home__card__rating">
+                        <li class="rating__item rating__item--active">Awful</li>
+                        <li class="rating__item rating__item--active">Bad</li>
+                        <li class="rating__item rating__item--active">Not bad</li>
+                        <li class="rating__item rating__item--active">Good</li>
+                        <li class="rating__item">Excellent</li>
                     </ul>
-
-                    <div class="home__card__price">$283/<span class="home__card__price-label">mon</span></div>
-
-                    <div class="home__card__footer">
-                        <button class="button button--default home__card__button">Overview</button>
-                        <button class="button button--primary home__card__button">Buy</button>
+                </div>
+                <div class="home__card__block home__card__info home__card__info--first">
+                    <div class="home__card__label">Covering:</div>
+                    <div class="home__card__value">Dental</div>
+                </div>
+                <div class="home__card__block home__card__info">
+                    <div class="home__card__label">Type:</div>
+                    <div class="home__card__value">
+                        <span class="home__card__text">EPO</span>
+                        <span class="home__card__help">?</span>
                     </div>
-
+                </div>
+                <div class="home__card__block home__card__info">
+                    <div class="home__card__label">Metal level:</div>
+                    <div class="home__card__value">
+                        <span class="home__card__medal home__card__medal--gold"></span>
+                        <span class="home__card__text">Gold</span>
+                        <span class="home__card__help">?</span>
+                    </div>
+                </div>
+                <div class="home__card__block home__card__info">
+                    <div class="home__card__label">
+                        <span class="home__card__help">?</span>
+                        <span class="home__card__text">Drugs:</span>
+                    </div>
+                    <div class="home__card__value">$15</div>
+                </div>
+                <div class="home__card__block home__card__info">
+                    <div class="home__card__label">
+                        <span class="home__card__help">?</span>
+                        <span class="home__card__text">Primary Care Visits:</span>
+                    </div>
+                    <div class="home__card__value">$75</div>
+                </div>
+                <div class="home__card__block home__card__info home__card__info--last">
+                    <div class="home__card__label">
+                        <span class="home__card__help">?</span>
+                        <span class="home__card__text">Yearly Deductible:</span>
+                    </div>
+                    <div class="home__card__value">$6000</div>
+                </div>
+                <div class="home__card__block home__card__price">
+                    <span class="home__card__price-amount">$283/</span><span class="home__card__price-label">mon</span>
+                </div>
+                <div class="home__card__block home__card__footer">
+                    <button class="button button--default home__card__button">Overview</button>
+                    <button class="button button--primary home__card__button">Buy</button>
                 </div>
             </li>
             <!-- End Dentalife -->
 
             <!-- Start Insurcom -->
             <li class="home__card">
-                <div class="home__card__block">
-
-                    <div class="home__card__header">
-                        <div class="home__card__image"
-                             style="background-image: url(/assets/images/insurcom.jpg);"></div>
-                        <h3 class="home__card__title">Insurcom</h3>
-                        <ul class="rating home__card__rating">
-                            <li class="rating__item rating__item--active">Awful</li>
-                            <li class="rating__item rating__item--active">Bad</li>
-                            <li class="rating__item rating__item--active">Not bad</li>
-                            <li class="rating__item rating__item--active">Good</li>
-                            <li class="rating__item rating__item--active">Excellent</li>
-                        </ul>
-                    </div>
-
-                    <ul class="home__card__list">
-                        <li class="home__card__row">
-                            <div class="home__card__label">Covering:</div>
-                            <div class="home__card__value">Vision</div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">Type:</div>
-                            <div class="home__card__value">
-                                <span class="home__card__text">POS</span>
-                                <span class="home__card__info">?</span>
-                            </div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">Metal level:</div>
-                            <div class="home__card__value">
-                                <span class="home__card__medal home__card__medal--bronze"></span>
-                                <span class="home__card__text">Bronze</span>
-                                <span class="home__card__info">?</span>
-                            </div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">
-                                <span class="home__card__info">?</span>
-                                <span class="home__card__text">Drugs:</span>
-                            </div>
-                            <div class="home__card__value">$15</div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">
-                                <span class="home__card__info">?</span>
-                                <span class="home__card__text">Primary Care Visits:</span>
-                            </div>
-                            <div class="home__card__value">$75</div>
-                        </li>
-                        <li class="home__card__row">
-                            <div class="home__card__label">
-                                <span class="home__card__info">?</span>
-                                <span class="home__card__text">Yearly Deductible:</span>
-                            </div>
-                            <div class="home__card__value">$6000</div>
-                        </li>
+                <div class="home__card__block home__card__header">
+                    <div class="home__card__image"
+                         style="background-image: url(/assets/images/logos/insurcom.jpg);"></div>
+                    <h3 class="home__card__title">Insurcom</h3>
+                    <ul class="rating home__card__rating">
+                        <li class="rating__item rating__item--active">Awful</li>
+                        <li class="rating__item rating__item--active">Bad</li>
+                        <li class="rating__item rating__item--active">Not bad</li>
+                        <li class="rating__item rating__item--active">Good</li>
+                        <li class="rating__item rating__item--active">Excellent</li>
                     </ul>
-
-                    <div class="home__card__price">$214/<span class="home__card__price-label">mon</span></div>
-
-                    <div class="home__card__footer">
-                        <button class="button button--default home__card__button">Overview</button>
-                        <button class="button button--primary home__card__button">Buy</button>
+                </div>
+                <div class="home__card__block home__card__info home__card__info--first">
+                    <div class="home__card__label">Covering:</div>
+                    <div class="home__card__value">Vision</div>
+                </div>
+                <div class="home__card__block home__card__info">
+                    <div class="home__card__label">Type:</div>
+                    <div class="home__card__value">
+                        <span class="home__card__text">POS</span>
+                        <span class="home__card__help">?</span>
                     </div>
-
+                </div>
+                <div class="home__card__block home__card__info">
+                    <div class="home__card__label">Metal level:</div>
+                    <div class="home__card__value">
+                        <span class="home__card__medal home__card__medal--bronze"></span>
+                        <span class="home__card__text">Bronze</span>
+                        <span class="home__card__help">?</span>
+                    </div>
+                </div>
+                <div class="home__card__block home__card__info">
+                    <div class="home__card__label">
+                        <span class="home__card__help">?</span>
+                        <span class="home__card__text">Drugs:</span>
+                    </div>
+                    <div class="home__card__value">$15</div>
+                </div>
+                <div class="home__card__block home__card__info">
+                    <div class="home__card__label">
+                        <span class="home__card__help">?</span>
+                        <span class="home__card__text">Primary Care Visits:</span>
+                    </div>
+                    <div class="home__card__value">$75</div>
+                </div>
+                <div class="home__card__block home__card__info home__card__info--last">
+                    <div class="home__card__label">
+                        <span class="home__card__help">?</span>
+                        <span class="home__card__text">Yearly Deductible:</span>
+                    </div>
+                    <div class="home__card__value">$6000</div>
+                </div>
+                <div class="home__card__block home__card__price">
+                    <span class="home__card__price-amount">$214/</span><span class="home__card__price-label">mon</span>
+                </div>
+                <div class="home__card__block home__card__footer">
+                    <button class="button button--default home__card__button">Overview</button>
+                    <button class="button button--primary home__card__button">Buy</button>
                 </div>
             </li>
             <!-- End Insurcom -->
@@ -666,6 +622,8 @@
         </ul>
     </div>
 </footer>
+
+<script type="text/javascript" src="/assets/scripts/main.js"></script>
 
 </body>
 </html>

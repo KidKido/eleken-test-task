@@ -46,6 +46,7 @@
             height: 18px;
             position: relative;
             opacity: 0.4;
+            transition: opacity 0.3s ease;
 
             &--active {
                 opacity: 1;
@@ -93,18 +94,148 @@
     &__cards {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
         margin-top: 20px;
         margin-bottom: 20px;
+
+        @include breakpoint(extra-large) {
+            justify-content: space-between;
+
+            &[data-view='table'] {
+                display: table;
+                width: 100%;
+                margin-top: 30px;
+                margin-bottom: 85px;
+
+                .home__card {
+                    display: table-row;
+                    border: none;
+                    margin-top: 0;
+                    margin-bottom: 0;
+
+                    &__block {
+                        display: table-cell;
+                        height: 80px;
+                        vertical-align: middle;
+                        white-space: nowrap;
+                        border-bottom: 1px solid $color-border;
+                        padding-left: 50px;
+                    }
+
+                    &__heading {
+                        height: auto;
+                        font-size: $text-size-extra-small;
+                        font-weight: $text-weight-bold;
+                        letter-spacing: 0.1em;
+                        line-height: $line-height-regular;
+                        text-transform: uppercase;
+                        vertical-align: top;
+                        white-space: normal;
+                        color: fade-out($color-primary, 0.6);
+                        border-bottom: none;
+
+                        &--drugs,
+                        &--visits,
+                        &--deductible,
+                        &--price {
+                            letter-spacing: 0.05em;
+                            line-height: 1.5em;
+                        }
+
+                        &:first-child {
+                            padding-left: 0;
+                        }
+                    }
+
+                    &__header {
+                        margin: 0;
+                        padding-left: 60px;
+                    }
+
+                    &__image {
+                        width: 40px;
+                        height: 40px;
+                    }
+
+                    &__title {
+                        font-size: $text-size-regular;
+                        line-height: $line-height-regular;
+                        margin-bottom: 3px;
+                    }
+
+                    &__rating > .rating__item {
+                        width: 12px;
+                        height: 12px;
+                    }
+
+                    &__info {
+                        border-top: none;
+                        padding-top: 0;
+                        padding-bottom: 0;
+                    }
+
+                    &__label {
+                        display: none;
+                    }
+
+                    &__medal {
+                        width: 14px;
+                        height: 14px;
+                    }
+
+                    &__price {
+                        margin: 0;
+
+                        &-amount {
+                            font-size: $text-size-regular;
+                            font-weight: $text-weight-regular;
+                            line-height: $line-height-initial;
+                        }
+
+                        &-label {
+                            font-size: $text-size-regular;
+                        }
+                    }
+
+                    &__footer {
+                        text-align: right;
+                        margin: 0;
+                    }
+
+                    &__button {
+                        width: auto;
+                        height: 30px;
+                        font-size: $text-size-extra-small;
+                        border-radius: 4px;
+
+                        &.button--default {
+                            border: 1px solid $color-border;
+                        }
+
+                        &.button--primary {
+                            padding-right: 22px;
+                            padding-left: 23px;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     &__card {
         border: 1px solid $color-border;
         border-radius: 2px;
+        margin: 20px 12px;
         flex: 0 0 282px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        overflow: hidden;
+
+        &--header {
+            display: none;
+        }
+
+        @include breakpoint(extra-large) {
+            margin-right: 0;
+            margin-left: 0;
+        }
 
         &__header {
             margin: 30px;
@@ -119,8 +250,9 @@
             background-size: cover;
             border-radius: 50%;
             position: absolute;
-            top: 0;
+            top: 50%;
             left: 0;
+            transform: translateY(-50%);
         }
 
         &__title {
@@ -134,20 +266,22 @@
             margin-left: 30px;
         }
 
-        &__row {
+        &__info {
             display: flex;
             line-height: 20px;
             border-top: 1px solid fade-out($color-primary, 0.95);
+            margin-right: 30px;
+            margin-left: 30px;
             padding-top: 10px;
             padding-bottom: 10px;
             justify-content: space-between;
 
-            &:first-child {
+            &--first {
                 border-top: none;
                 padding-top: 0;
             }
 
-            &:last-child {
+            &--last {
                 padding-bottom: 0;
             }
         }
@@ -164,20 +298,20 @@
             align-items: center;
         }
 
-        &__info {
+        &__help {
             width: 14px;
             height: 14px;
             background: $color-light-blue;
             font-size: 11px;
-            font-weight: $text-weight-bold;
+            font-weight: $text-weight-semi-bold;
             line-height: 14px;
             text-align: center;
             color: $color-blue;
             border-radius: 50%;
         }
 
-        &__info + &__text,
-        &__text + &__info {
+        &__help + &__text,
+        &__text + &__help {
             margin-left: 5px;
         }
 
@@ -205,16 +339,18 @@
         }
 
         &__price {
-            font-size: $text-size-small * 3;
-            font-weight: $text-weight-light;
-            line-height: $line-height-regular;
-            letter-spacing: 0.02em;
             text-align: center;
-            margin: 30px 30px 24px 30px;
+            margin: 30px;
+
+            &-amount {
+                font-size: $text-size-small * 3;
+                font-weight: $text-weight-light;
+                line-height: $line-height-regular;
+            }
 
             &-label {
                 font-size: $title-size-regular;
-                font-weight: $text-weight-regular;
+                line-height: $line-height-initial;
             }
         }
 
@@ -236,8 +372,7 @@
             }
 
             &.button--primary {
-                margin-right: -1px;
-                margin-bottom: -1px;
+                border-bottom-right-radius: 2px;
             }
         }
     }
