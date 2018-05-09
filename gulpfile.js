@@ -19,12 +19,14 @@ const config = {
 
 const path = {
     destination: {
+        docs: 'docs/',
         views: 'public/',
         images: 'public/assets/images/',
         styles: 'public/assets/styles/',
         scripts: 'public/assets/scripts/'
     },
     source: {
+        docs: 'public/**/*',
         views: 'views/*.html',
         images: 'assets/images/**/*.*',
         styles: 'assets/styles/main.scss',
@@ -36,7 +38,7 @@ const path = {
         styles: 'assets/styles/**/*.*',
         scripts: 'assets/scripts/**/*.*'
     },
-    clean: 'public/*'
+    clean: ['docs/*', 'public/*']
 };
 
 gulp.task('views:build', function () {
@@ -70,8 +72,14 @@ gulp.task('scripts:build', function () {
         .pipe(browserSync.stream());
 });
 
-gulp.task('clean', function (callback) {
-    rimraf(path.clean, callback);
+gulp.task('docs', function () {
+    gulp.src(path.source.docs).pipe(gulp.dest(path.destination.docs));
+});
+
+gulp.task('clean', function () {
+    path.clean.map(function (path) {
+        rimraf.sync(path);
+    });
 });
 
 gulp.task('server', function () {

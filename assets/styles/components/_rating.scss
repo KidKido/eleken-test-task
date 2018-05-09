@@ -6,14 +6,14 @@
     &__item {
         width: 16px;
         height: 16px;
-        background: url(/assets/images/icons/star.svg) no-repeat center;
+        background: url(../images/icons/star.svg) no-repeat center;
         background-size: contain;
         text-indent: -9999em;
         margin-right: 2px;
         opacity: 0.15;
 
         &--active {
-            background-image: url(/assets/images/icons/star-active.svg);
+            background-image: url(../images/icons/star-active.svg);
             opacity: 1;
         }
     }
